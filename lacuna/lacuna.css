@@ -1,0 +1,26 @@
+/*
+
+This is the loader for your Mod's CSS files. Import your modules here.
+If you wish, you can also add rulesets that implement a "failed to load" message.
+Please do not add any other CSS.
+
+*/
+
+@import "modules/lacuna-base.css";
+@import "modules/lacuna-ui-tweaks.css";
+@import "modules/lacuna-tabs.css";
+@import "modules/lacuna-essentials.css";
+@import "modules/lacuna-urlbar.css";
+@import "modules/lacuna-audio-indicator.css";
+@import "modules/lacuna-media-ctrl.css";
+@import "modules/lacuna-animations.css";
+@import "modules/lacuna-extra.css";
+
+/*
+
+If you have a config file that is meant to be in the chrome folder, you can also
+import that here, like this:
+
+@import "../example-config.css"
+
+*/

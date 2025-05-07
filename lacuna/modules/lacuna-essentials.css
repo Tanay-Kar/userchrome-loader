@@ -1,0 +1,34 @@
+/* Colouring Essentials */
+
+.zen-essentials-container .tabbrowser-tab {
+    .tab-background {
+        background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
+    }
+
+    &:hover .tab-background {
+        background-color: light-dark(rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.45)) !important;
+    }
+
+    @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
+        &[visuallyselected] .tab-background {
+            &::after {
+                left: -50% !important;
+                top: -50% !important;
+                width: 200% !important;
+                height: 200% !important;
+                filter: blur (20px) !important;
+            }
+
+            &::before {
+                mask-image: none !important;
+                background-color: light-dark(color-mix(in srgb, #ffffff 65%, transparent),
+                        color-mix(in srgb, #000000 55%, transparent)) !important;
+            }
+        }
+
+        &[visuallyselected]:hover .tab-background::before {
+            background-color: light-dark(color-mix(in srgb, #ffffff 55%, transparent),
+                    color-mix(in srgb, #000000 65%, transparent)) !important;
+        }
+    }
+}

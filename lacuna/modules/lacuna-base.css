@@ -1,0 +1,36 @@
+browser {
+    /* Needed for blur */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* State-less Tab background */
+browser[transparent='true'] {
+    background: light-dark(#ffffff33, #ffffff09) !important;
+}
+
+/* Based on code by Verix */
+/* Hide all results after the 6th one */
+#urlbar[open] #urlbar-results>*:nth-child(n+6) {
+    display: none !important;
+}
+
+/* Transparent workspace custom Primary Colour */
+/* Replace workspace id from about:config > `zen.workspaces.active` */
+
+:root[zen-workspace-id="991ff3e9-a298-46e6-b95f-b04753959811"] {
+    --zen-primary-color: #dedede !important;
+    /* Change according to wallpaper */
+}
+
+/* Makes top 30px a draggable area for the window */
+@media not (-moz-bool-pref: "lacuna.utils.disable-top-drag") {
+    @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+        #tabbrowser-tabbox::after {
+            content: "" !important;
+            position: absolute !important;
+            height: 15px !important;
+            width: 100% !important;
+            -moz-window-dragging: drag !important;
+        }
+    }
+}

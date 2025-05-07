@@ -1,0 +1,36 @@
+/* === ANIMATIONS === */
+.tabbrowser-tab {
+    transition: transform 0.2s ease-in-out !important;
+}
+
+.tabbrowser-tab:active {
+    transform: translate(-0.1px, 0.1px) skewX(1deg) skewY(1deg) !important;
+    filter: blur(0.6px) !important;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: skewX(0) skewY(0);
+    }
+
+    25% {
+        transform: skewX(1.2deg) skewY(-1.2deg);
+    }
+
+    75% {
+        transform: skewX(-1.2deg) skewY(1.2deg);
+    }
+
+    100% {
+        transform: skewX(0) skewY(0);
+    }
+}
+
+.tabbrowser-tab[multiselected] {
+    animation: wiggle 0.3s infinite;
+}
+
+.toolbarbutton-1:active {
+    transform: skewX(1deg) skewY(1deg) !important;
+    filter: blur(0.6px) !important;
+}
